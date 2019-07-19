@@ -1,15 +1,20 @@
 {
-    "name": "greenter/core",
+    "name": "greenterose/core",
     "description": "Greenter Core",
     "keywords": ["sunat", "greenter", "facturacion electronica"],
     "license": "MIT",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Giancarlos Salas",
             "email": "giansalex@gmail.com"
+        },
+        {
+            "name": "Luis Oscátegui",
+            "email": "osktgui@gmail.com"
         }
     ],
-    "homepage": "https://github.com/giansalex/greenter-core",
+    "homepage": "https://github.com/osktgui/greenter-core",
     "type": "library",
     "require": {
 		"php": ">=5.5.9"

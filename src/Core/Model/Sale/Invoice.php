@@ -101,6 +101,11 @@ class Invoice extends BaseSale
     private $observacion;
 
     /**
+     * @var string
+     */
+    private $descripcion;
+
+    /**
      * @return string
      */
     public function getTipoOperacion()
@@ -396,7 +401,7 @@ class Invoice extends BaseSale
     */
     public function getObservacion()
     {
-	return $this->observacion;
+      return $this->observacion;
     }
 
     /**
@@ -405,7 +410,25 @@ class Invoice extends BaseSale
     */
     public function setObservacion($observacion)
     {
-	$this->observacion = $observacion;
-	return $this;
+      $this->observacion = $observacion;
+      return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescripcion()
+    {
+      return $this->descripcion;
+    }
+
+    /**
+     * @param string $descripcion
+     * @return Invoice
+     */
+    public function setDescripcion($descripcion)
+    {
+      $this->descripcion = $descripcion;
+      return $this;
     }
 }

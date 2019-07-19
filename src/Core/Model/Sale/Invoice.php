@@ -431,4 +431,5 @@ class Invoice extends BaseSale
       $this->descripcion = $descripcion;
       return $this;
     }
+    
 }

@@ -24,6 +24,7 @@ class BaseSale implements DocumentInterface
 
     /**
      * @var string
+     *
      */
     protected $tipoDoc;
 
@@ -96,6 +97,16 @@ class BaseSale implements DocumentInterface
      * @var float
      */
     protected $mtoISC;
+
+    /**
+     * @var float
+     */
+    protected $mtoBaseIvap;
+
+    /**
+     * @var float
+     */
+    protected $mtoIVAP;
 
     /**
      * @var float
@@ -429,6 +440,26 @@ class BaseSale implements DocumentInterface
     /**
      * @return float
      */
+    public function getMtoIVAP()
+    {
+      return $this->mtoIVAP;
+    }
+
+    /**
+     * @param float $mtoIVAP
+     *
+     * @return $this
+     */
+    public function setMtoIVAP($mtoIVAP)
+    {
+      $this->mtoIVAP = $mtoIVAP;
+
+      return $this;
+    }
+
+    /**
+     * @return float
+     */
     public function getMtoOtrosTributos()
     {
         return $this->mtoOtrosTributos;
@@ -582,6 +613,26 @@ class BaseSale implements DocumentInterface
     {
         $this->mtoBaseIsc = $mtoBaseIsc;
         return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getMtoBaseIvap()
+    {
+      return $this->mtoBaseIvap;
+    }
+
+    /**
+     * Set Monto Base IVAP.
+     *
+     * @param float $mtoBaseIvap
+     * @return $this
+     */
+    public function setMtoBaseIvap($mtoBaseIvap)
+    {
+      $this->mtoBaseIvap = $mtoBaseIvap;
+      return $this;
     }
 
     /**

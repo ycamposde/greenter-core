@@ -106,6 +106,11 @@ class Invoice extends BaseSale
     private $descripcion;
 
     /**
+     * @var string
+     */
+    private $mtoTributosGratuitas;
+
+    /**
      * @return string
      */
     public function getTipoOperacion()
@@ -429,6 +434,24 @@ class Invoice extends BaseSale
     public function setDescripcion($descripcion)
     {
       $this->descripcion = $descripcion;
+      return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMtoTributosGratuitas()
+    {
+      return $this->mtoTributosGratuitas;
+    }
+
+    /**
+     * @param float $mtoTributosGratuitas
+     * @return Invoice
+     */
+    public function setMtoTributosGratuitas($mtoTributosGratuitas)
+    {
+      $this->mtoTributosGratuitas = $mtoTributosGratuitas;
       return $this;
     }
 

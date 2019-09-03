@@ -124,6 +124,10 @@ class BaseSale implements DocumentInterface
     protected $totalImpuestos;
 
     /**
+     * @var float
+     */
+    protected $precioVentaTotal;
+    /**
      * Importe total de la venta, cesión en uso o del servicio prestado.
      *
      * @var float
@@ -706,5 +710,23 @@ class BaseSale implements DocumentInterface
         ];
 
         return join('-', $parts);
+    }
+
+    /**
+     * @return float
+     */
+    public function getPrecioVentaTotal()
+    {
+      return $this->precioVentaTotal;
+    }
+
+    /**
+     * @param float $precioVentaTotal
+     * @return $this
+     */
+    public function setPrecioVentaTotal($precioVentaTotal)
+    {
+      $this->precioVentaTotal = $precioVentaTotal;
+      return $this;
     }
 }

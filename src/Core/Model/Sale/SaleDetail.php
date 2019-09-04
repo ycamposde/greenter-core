@@ -53,6 +53,13 @@ class SaleDetail
     private $descripcion;
 
     /**
+     * Mas Detalle del Producto.
+     *
+     * @var string
+     */
+    private $masDetalle;
+
+    /**
      * Monto del valor unitario (PrecioUnitario SIN IGV).
      *
      * @var float
@@ -268,8 +275,25 @@ class SaleDetail
     public function setDescripcion($descripcion)
     {
         $this->descripcion = $descripcion;
-
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMasDetalle() {
+      return $this->masDetalle;
+    }
+
+    /**
+     * @param string $masDetalle
+     *
+     * @return SaleDetail
+     */
+    public function setMasDetalle($masDetalle)
+    {
+      $this->masDetalle = $masDetalle;
+      return $this;
     }
 
     /**

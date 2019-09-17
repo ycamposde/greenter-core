@@ -44,6 +44,11 @@ class Company
     private $telephone;
 
     /**
+     * @var string
+     */
+    private $tipoDoc;
+
+    /**
      * @return string
      */
     public function getRuc()
@@ -158,4 +163,23 @@ class Company
         $this->telephone = $telephone;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getTipoDoc()
+    {
+      return $this->tipoDoc;
+    }
+
+    /**
+     * @param string $tipoDoc
+     * @return Company
+     */
+    public function setTipoDoc($tipoDoc)
+    {
+      $this->tipoDoc = $tipoDoc;
+      return $this;
+    }
+
 }

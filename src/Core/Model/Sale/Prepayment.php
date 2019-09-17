@@ -29,6 +29,11 @@ class Prepayment
     private $total;
 
     /**
+     * @var string
+     */
+    private $fechaAnticipo;
+
+    /**
      * @return string
      */
     public function getTipoDocRel()
@@ -87,4 +92,25 @@ class Prepayment
 
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getFechaAnticipo()
+    {
+      return $this->fechaAnticipo;
+    }
+
+    /**
+     * @param string $fechaAnticipo
+     *
+     * @return Prepayment
+     */
+    public function setFechaAnticipo($fechaAnticipo)
+    {
+      $this->fechaAnticipo = $fechaAnticipo;
+
+      return $this;
+    }
+
 }

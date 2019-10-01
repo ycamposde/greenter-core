@@ -49,6 +49,11 @@ class Note extends BaseSale
     private $valorVenta;
 
     /**
+     * @var float
+     */
+    private $mtoTributosGratuitas;
+
+    /**
      * @return string
      */
     public function getCodMotivo()
@@ -184,6 +189,26 @@ class Note extends BaseSale
     public function setValorVenta($valorVenta)
     {
       $this->valorVenta = $valorVenta;
+
+      return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getMtoTributosGratuitas()
+    {
+      return $this->mtoTributosGratuitas;
+    }
+
+    /**
+     * @param float $mtoTributosGratuitas
+     *
+     * @return Note
+     */
+    public function setMtoTributosGratuitas($mtoTributosGratuitas)
+    {
+      $this->mtoTributosGratuitas = $mtoTributosGratuitas;
 
       return $this;
     }

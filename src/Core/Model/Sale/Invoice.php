@@ -96,6 +96,11 @@ class Invoice extends BaseSale
     private $valorVenta;
 
     /**
+     * @var float
+     */
+    private $subTotal;
+
+    /**
      * @var string
      */
     private $observacion;
@@ -399,6 +404,25 @@ class Invoice extends BaseSale
     {
         $this->valorVenta = $valorVenta;
         return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getSubTotal()
+    {
+      return $this->subTotal;
+    }
+
+    /**
+     * @param float $subTotal
+     *
+     * @return Invoice
+     */
+    public function setSubTotal($subTotal)
+    {
+      $this->subTotal = $subTotal;
+      return $this;
     }
 
     /**

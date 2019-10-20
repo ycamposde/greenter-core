@@ -122,14 +122,27 @@ class SaleDetail
      * @var float
      */
     private $mtoBaseOth;
+
     /**
      * @var float
      */
     private $porcentajeOth;
+
     /**
      * @var float
      */
     private $otroTributo;
+
+    /**
+     * @var float
+     */
+    private $icbper;
+
+    /**
+     * @var float
+     */
+    private $factorIcbper = 0.10;
+
     /**
      * @var float
      */
@@ -433,6 +446,44 @@ class SaleDetail
     {
         $this->totalImpuestos = $totalImpuestos;
         return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getIcbper()
+    {
+      return $this->icbper;
+    }
+
+    /**
+     * @param float $icbper
+     *
+     * @return SaleDetail
+     */
+    public function setIcbper($icbper)
+    {
+      $this->icbper = $icbper;
+      return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getFactorIcbper()
+    {
+      return $this->factorIcbper;
+    }
+
+    /**
+     * @param float $factorIcbper
+     *
+     * @return SaleDetail
+     */
+    public function setFactorIcbper($factorIcbper)
+    {
+      $this->factorIcbper = $factorIcbper;
+      return $this;
     }
 
     /**

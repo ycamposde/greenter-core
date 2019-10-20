@@ -121,12 +121,23 @@ class BaseSale implements DocumentInterface
     /**
      * @var float
      */
+    protected $icbper;
+
+    /**
+     * @var float
+     */
     protected $totalImpuestos;
 
     /**
      * @var float
      */
+    protected $redondeo;
+
+    /**
+     * @var float
+     */
     protected $precioVentaTotal;
+
     /**
      * Importe total de la venta, cesión en uso o del servicio prestado.
      *
@@ -479,6 +490,44 @@ class BaseSale implements DocumentInterface
         $this->mtoOtrosTributos = $mtoOtrosTributos;
 
         return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getIcbper()
+    {
+      return $this->icbper;
+    }
+
+    /**
+     * @param float $icbper
+     *
+     * @return $this
+     */
+    public function setIcbper($icbper)
+    {
+      $this->icbper = $icbper;
+      return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getRedondeo()
+    {
+      return $this->redondeo;
+    }
+
+    /**
+     * @param float $redondeo
+     *
+     * @return $this
+     */
+    public function setRedondeo($redondeo)
+    {
+      $this->redondeo = $redondeo;
+      return $this;
     }
 
     /**

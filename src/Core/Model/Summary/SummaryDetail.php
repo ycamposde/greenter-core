@@ -114,6 +114,11 @@ class SummaryDetail
     private $mtoOtrosTributos;
 
     /**
+     * @var float
+     */
+    private $mtoIcbper;
+
+    /**
      * @return string
      */
     public function getTipoDoc()
@@ -468,5 +473,23 @@ class SummaryDetail
         $this->mtoOtrosTributos = $mtoOtrosTributos;
 
         return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getMtoIcbper()
+    {
+      return $this->mtoIcbper;
+    }
+    /**
+     * @param float $mtoIcbper
+     *
+     * @return SummaryDetail
+     */
+    public function setMtoIcbper($mtoIcbper)
+    {
+      $this->mtoIcbper = $mtoIcbper;
+      return $this;
     }
 }

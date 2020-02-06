@@ -3,6 +3,7 @@
     "description": "Greenter Core",
     "keywords": ["sunat", "greenter", "facturacion electronica"],
     "license": "MIT",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Giancarlos Salas",

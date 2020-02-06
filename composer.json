@@ -3,7 +3,6 @@
     "description": "Greenter Core",
     "keywords": ["sunat", "greenter", "facturacion electronica"],
     "license": "MIT",
-    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Giancarlos Salas",
@@ -17,9 +16,9 @@
     "homepage": "https://github.com/ycamposde/greenter-core",
     "type": "library",
     "require": {
-		"php": ">=5.6"
+		    "php": ">=5.6"
     },
-	"autoload": {
+	  "autoload": {
         "psr-4": {
             "Greenter\\": "src/Core/"
         }

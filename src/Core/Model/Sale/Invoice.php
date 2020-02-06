@@ -113,6 +113,16 @@ class Invoice extends BaseSale
     private $direccionEntrega;
 
     /**
+     * @var string
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     */
+    private $mtoTributosGratuitas;
+
+    /**
      * @return string
      */
     public function getTipoOperacion()
@@ -439,19 +449,18 @@ class Invoice extends BaseSale
      */
     public function getObservacion()
     {
-        return $this->observacion;
+       return $this->observacion;
     }
 
     /**
      * @param string $observacion
-     *
      * @return Invoice
      */
     public function setObservacion($observacion)
     {
-        $this->observacion = $observacion;
+       $this->observacion = $observacion;
 
-        return $this;
+       return $this;
     }
 
     /**
@@ -475,4 +484,42 @@ class Invoice extends BaseSale
 
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getDescripcion()
+    {
+       return $this->descripcion;
+    }
+
+    /**
+     * @param string $descripcion
+     * @return Invoice
+     */
+    public function setDescripcion($descripcion)
+    {
+       $this->descripcion = $descripcion;
+
+       return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMtoTributosGratuitas()
+    {
+      return $this->mtoTributosGratuitas;
+    }
+
+    /**
+     * @param float $mtoTributosGratuitas
+     * @return Invoice
+     */
+    public function setMtoTributosGratuitas($mtoTributosGratuitas)
+    {
+      $this->mtoTributosGratuitas = $mtoTributosGratuitas;
+      return $this;
+    }
+
 }

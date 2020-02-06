@@ -492,6 +492,7 @@ class SummaryDetail
      */
     public function setMtoIcbper($mtoIcbper)
     {
+
         $this->mtoIcbper = $mtoIcbper;
 
         return $this;

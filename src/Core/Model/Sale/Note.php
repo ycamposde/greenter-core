@@ -44,6 +44,16 @@ class Note extends BaseSale
     private $perception;
 
     /**
+     * @var float
+     */
+    private $valorVenta;
+
+    /**
+     * @var float
+     */
+    private $mtoTributosGratuitas;
+
+    /**
      * @return string
      */
     public function getCodMotivo()
@@ -161,5 +171,45 @@ class Note extends BaseSale
         $this->perception = $perception;
 
         return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getValorVenta()
+    {
+      return $this->valorVenta;
+    }
+
+    /**
+     * @param float $valorVenta
+     *
+     * @return Note
+     */
+    public function setValorVenta($valorVenta)
+    {
+      $this->valorVenta = $valorVenta;
+
+      return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getMtoTributosGratuitas()
+    {
+      return $this->mtoTributosGratuitas;
+    }
+
+    /**
+     * @param float $mtoTributosGratuitas
+     *
+     * @return Note
+     */
+    public function setMtoTributosGratuitas($mtoTributosGratuitas)
+    {
+      $this->mtoTributosGratuitas = $mtoTributosGratuitas;
+
+      return $this;
     }
 }

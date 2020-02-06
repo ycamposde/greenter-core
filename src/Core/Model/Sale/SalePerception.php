@@ -39,6 +39,10 @@ class SalePerception
     private $mtoTotal;
 
     /**
+     * @var float
+     */
+    private $mtoMonedaNacional;
+    /**
      * @return string
      */
     public function getCodReg()
@@ -136,4 +140,27 @@ class SalePerception
 
         return $this;
     }
+
+    /**
+     * @return float
+     */
+    public function getMtoMonedaNacional()
+    {
+      return $this->mtoMonedaNacional;
+    }
+
+  /**
+   * @param $mtoMonedaNacional
+   * @return SalePerception
+   * @internal param float $mtoTotal
+   *
+   */
+    public function setMtoMonedaNacional($mtoMonedaNacional)
+    {
+      $this->mtoMonedaNacional = $mtoMonedaNacional;
+
+      return $this;
+    }
+
+
 }

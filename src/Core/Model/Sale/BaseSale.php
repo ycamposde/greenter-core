@@ -25,6 +25,7 @@ class BaseSale implements DocumentInterface
 
     /**
      * @var string
+     *
      */
     protected $tipoDoc;
 
@@ -132,6 +133,11 @@ class BaseSale implements DocumentInterface
      * @var float
      */
     protected $redondeo;
+
+    /**
+     * @var float
+     */
+    protected $precioVentaTotal;
 
     /**
      * Importe total de la venta, cesión en uso o del servicio prestado.
@@ -452,6 +458,26 @@ class BaseSale implements DocumentInterface
     /**
      * @return float
      */
+    public function getMtoIVAP()
+    {
+      return $this->mtoIVAP;
+    }
+
+    /**
+     * @param float $mtoIVAP
+     *
+     * @return $this
+     */
+    public function setMtoIVAP($mtoIVAP)
+    {
+      $this->mtoIVAP = $mtoIVAP;
+
+      return $this;
+    }
+
+    /**
+     * @return float
+     */
     public function getMtoOtrosTributos()
     {
         return $this->mtoOtrosTributos;
@@ -652,26 +678,6 @@ class BaseSale implements DocumentInterface
     /**
      * @return float
      */
-    public function getMtoIvap()
-    {
-        return $this->mtoIvap;
-    }
-
-    /**
-     * @param float $mtoIvap
-     *
-     * @return $this
-     */
-    public function setMtoIvap($mtoIvap)
-    {
-        $this->mtoIvap = $mtoIvap;
-
-        return $this;
-    }
-
-    /**
-     * @return float
-     */
     public function getMtoBaseIsc()
     {
         return $this->mtoBaseIsc;
@@ -768,5 +774,23 @@ class BaseSale implements DocumentInterface
         ];
 
         return join('-', $parts);
+    }
+
+    /**
+     * @return float
+     */
+    public function getPrecioVentaTotal()
+    {
+      return $this->precioVentaTotal;
+    }
+
+    /**
+     * @param float $precioVentaTotal
+     * @return $this
+     */
+    public function setPrecioVentaTotal($precioVentaTotal)
+    {
+      $this->precioVentaTotal = $precioVentaTotal;
+      return $this;
     }
 }
